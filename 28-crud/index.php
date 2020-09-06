@@ -1,18 +1,35 @@
-<!DOCTYPE html>
-  <html>
-    <head>
-      <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+<?php
+include_once 'includes/header.php';
+?>
 
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
+<div  class="row">
+  <div class="col s12 m6 push-m3">
+    <h3 class="light">Cliente</h3>
+    <table class="striped">
+      <thead>
+        <tr>
+          <th>nome</th>
+          <th>sobrenome</th>
+          <th>e-mal</th>
+          <th>idade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Rodrigo</td>
+          <td>silva</td>
+          <td>yahoo.com,br</td>
+          <td>34</td>
+          <td><a href="" class="btn-floating orange"><i class="material-icons">edit</i></a></td>
+          <td><a href="" class="btn-floating red"><i class="material-icons">delete</i></a></td>
+        </tr>
+      </tbody>
+    </table>
+<br>
+<a href="adicionar.php" class="btn"> Adicionar Cliente</a>
+  </div>
+</div>
 
-    <body>
-
-      <!--JavaScript at end of body for optimized loading-->
-      <script type="text/javascript" src="js/materialize.min.js"></script>
-    </body>
-  </html>
+<?php
+include_once 'includes/footer.php';
+?>
