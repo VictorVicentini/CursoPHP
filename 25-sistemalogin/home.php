@@ -3,7 +3,7 @@ require_once 'db_conect.php';
 session_start();
 //verificando se esta logaado
 if(isset($_SESSION['logado'])):
-    header('Location: index.php')
+    header('Location: index.php');
 endif;
 
 $id = $_SESSION['id_usuario'];
