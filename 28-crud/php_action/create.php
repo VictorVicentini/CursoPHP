@@ -2,11 +2,24 @@
 session_start();
 require_once 'db_connect.php';
 
+//para se proteger de haker
+function clear($input){
+    global $connect;
+///para se proteger do sql insert
+$var = mysqli_escape_string($connect,$input);
+//para se proteger de css(cross site scripting)
+$var = htmlspecialchars($var);
+
+return $var;
+}
+
+
+
 if(isset($_POST['btn-cadastrar'])):
-    $nome = mysqli_escape_string($connect,$_POST['nome']);
-    $sobrenome = mysqli_escape_string($connect,$_POST['sobrenome']);
-    $idade = mysqli_escape_string($connect,$_POST['idade']);
-    $email = mysqli_escape_string($connect,$_POST['email']);
+    $nome = clear($_POST['nome']);
+    $sobrenome = clear($_POST['sobrenome']);
+    $idade = clear($_POST['idade']);
+    $email = clear($_POST['email']);
 
     $sql = "insert into cliente (nome, sobrenome, email, idade) values ('$nome', '$sobrenome', '$email', '$idade')";
 
