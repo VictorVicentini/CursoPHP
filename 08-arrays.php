@@ -41,4 +41,4 @@ foreach($pessoa as $indice=>$valor){
 
 //arrays multidimensionais
 $time = array("cariocas"=>array("vasco", "flamengo", "botafogo"),
-"paulistas"=>array("santos", "são paulo","palmeiras"))
+"paulistas"=>array("santos", "são paulo","palmeiras"));
